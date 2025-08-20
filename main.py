@@ -34,7 +34,7 @@ class model_input(BaseModel):
     DiabetesPedigreeFunction : float
     Age : int
     
-diabetes_model = pickle.load(open('/content/diabetes_model.sav', 'rb'))
+diabetes_model = pickle.load(open("C:/Users/ASUS/Downloads/ML Model (API)/diabetes_model.sav",'rb'))
 
 @app.post('/diabetes_prediction')
 def diabetes_predd(input_parameters : model_input):
@@ -58,4 +58,5 @@ def diabetes_predd(input_parameters : model_input):
       return "The person is not diabetic"
     else:
       return "The person is diabetic"
+
 

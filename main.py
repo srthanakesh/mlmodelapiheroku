@@ -51,13 +51,14 @@ def diabetes_predd(input_parameters : model_input):
     dpf = input_dictionary['DiabetesPedigreeFunction']
     age = input_dictionary['Age']
 
-    input_list = [preg, glu, bp, skin, ins, bmi, dpf, age]
+    input_list = [[preg, glu, bp, skin, ins, bmi, dpf, age]]
     prediction = diabetes_model.predict(input_list)
 
     if (prediction[0]==0):
       return "The person is not diabetic"
     else:
       return "The person is diabetic"
+
 
 
 
